@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puyo Puyo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game-container">
+  <div id="left-panel">
+    <div class="panel-box">
+      <h3>NEXT</h3>
+      <canvas id="next-canvas" width="120" height="120"></canvas>
+    </div>
+    <div class="panel-box">
+      <h3>SCORE</h3>
+      <div id="score-display" class="score-text">0</div>
+    </div>
+    <div class="panel-box">
+      <h3>CHAIN</h3>
+      <div id="chain-display" class="score-text">0</div>
+    </div>
+  </div>
+  <canvas id="game-canvas" width="300" height="600"></canvas>
+  <div id="right-panel">
+    <div class="panel-box">
+      <h3>HOW TO PLAY</h3>
+      <div class="instructions">
+        <p><b>Move:</b> Left/Right</p>
+        <p><b>Rotate:</b> Up / Z / X</p>
+        <p><b>Drop:</b> Down</p>
+        <p><b>Hard Drop:</b> Space</p>
+        <p><b>Pause:</b> P</p>
+      </div>
+    </div>
+    <div class="panel-box">
+      <h3>TARGET</h3>
+      <div class="instructions">
+        <p>Match 4+ same-color puyos to pop them.</p>
+        <p>Chain reactions multiply your score!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="overlay" class="overlay hidden">
+  <div id="overlay-content">
+    <h1 id="overlay-title">PUYO PUYO</h1>
+    <p id="overlay-subtitle">Press Enter to start</p>
+    <button id="overlay-button" onclick="startGame()">START</button>
+  </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
